@@ -30,14 +30,18 @@ class Window(QtWidgets.QWidget):
         
         self.yazı_alanı2 = QtWidgets.QLineEdit()
               
-        self.sonuc = QtWidgets.QLabel()
-        self.sonuc.setText("Sonuç")
+        self.sonuc = QtWidgets.QLineEdit(self)
+        self.sonuc.move(200,200)
+       
+        self.sonuc2 = QtWidgets.QLabel(self)
+        self.sonuc2.setText("Sonuc")
+        self.sonuc2.move(150,200)
         
         v_box = QtWidgets.QVBoxLayout()
         
         v_box.addWidget(self.yazı_alanı1)
         v_box.addWidget(self.yazı_alanı2)
-        v_box.addWidget(self.sonuc)
+        
         
         v_box.addStretch()
         v_box.addWidget(self.yenile)
